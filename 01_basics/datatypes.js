@@ -31,3 +31,16 @@ console.log(typeof myFunction);
 const temp = null
 
 console.log(typeof temp);
+
+//Stack memory is for primitive datatype, 
+//when stack memory is used, we get the copy of the variable
+//Heap memory is for non primitive datatype,
+//when heap memory is used, we get the reference of the variable,
+//so whatever changes we will do on the variable, the original value would be changed
+
+let myName = "Prachi"
+
+let myLastName = myName
+
+console.log(myLastName);
+
