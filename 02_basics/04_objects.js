@@ -42,3 +42,12 @@ console.log(Object.keys(obj));
 console.log(Object.values(obj));
 console.log(Object.entries(obj));
 console.log(obj.hasOwnProperty('name'));
+
+const course ={
+    courseName:"JS",
+    courseFees:999
+}
+
+const {courseName} = course //this is obj de structure 
+
+console.log(courseName) 
