@@ -49,3 +49,41 @@ function userLoggedIn(user) {
 }
 
 console.log(userLoggedIn());
+
+function calculateCartPrice(...cost/* rest opertore */) {
+    return cost
+    
+}
+
+console.log(calculateCartPrice(100,200,300));
+
+function calc(val1, val2, ...cost) {
+    return cost
+    
+}
+
+console.log(calc(100,200,300,400,500));
+
+
+const userDetails = {
+    name : "Prachi",
+    age : 29
+}
+
+function handleObject(anyObject) {
+    console.log(`username is ${anyObject.name} and age is ${anyObject.age}`);
+} 
+
+handleObject(userDetails)
+handleObject({
+    name:"Prach",
+    age:29
+})
+
+const myNewArray = [200,300,400,500]
+
+function returnSecondValue(getArray) {
+    console.log(getArray[1]);
+}
+
+returnSecondValue(myNewArray)
