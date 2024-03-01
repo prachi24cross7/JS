@@ -17,13 +17,26 @@
 </body>
 <script>
     const parent = document.querySelector('.parent')
-    consol.log(parent);
+    console.log(parent);
     console.log(parent.children); //given HTML collection
-    console.log(parent.children[0].innerHTML);
+    console.log(parent.children[2]); //this will give the complete div value
+    console.log(parent.children[1].innerHTML);
 
     for (let i = 0; i < parent.children.length; i++) {
         console.log(parent.children[i].innerHTML);
         
     }
+
+    parent.children[3].style.color="orange"
+
+    console.log(parent.firstElementChild); //moving from parent to child
+    console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day');
+    console.log(dayOne);
+    console.log(dayOne.parentElement); //child to parent move
+    console.log(dayOne.nextElementSibling);
+
+    console.log("NODES:", parent.childNodes);
 </script>
 </html>
