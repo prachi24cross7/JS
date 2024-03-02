@@ -30,3 +30,34 @@ buttons.forEach(function (button){
 });
 ```
 
+##project 2 
+
+```javascript
+
+const form = document.querySelector('form')
+//if you try to get and parse the height and weight at this point of the code then empty value would be submitted in the form variable
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+// when you will get and parse the height and weight at this point then it will be considered after hitting on calculate button as we have taken addEventListener as submit
+  const height = parseInt(document.querySelector('#height').value)
+
+  const weight = parseInt(document.querySelector('#weight').value)
+
+  const results = document.querySelector('#results')
+
+  if(height == '' || height <0 || isNaN(height)){
+      results.innerHTML = `Please enter a valid height ${height}`
+  }
+
+  else if(weight == '' || weight < 0 || isNaN(weight)){
+    results.innerHTML = `Please enter a valid weight ${weight}`
+  }
+
+  else{
+    const BMI = (weight/((height * height )/10000)).toFixed(2)
+
+    results.innerHTML = `<span>${BMI}</span>`;
+  }
+})
+```
+
