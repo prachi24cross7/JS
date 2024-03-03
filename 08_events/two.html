@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Learning    </h1>
+    <button id="stop">STOP</button>
+    
+</body>
+
+<script>
+    setTimeout(function(){
+        console.log("Prachi")
+    },2000)
+
+    setInterval(function(){
+        console.log("prachi")
+    },2000)
+
+    const sayTimeOut = function(){
+        console.log("sayTimeOut")
+    }
+    const jsh1 = function(){
+        document.querySelector('h1').
+        innerHTML = "JS"
+    }
+
+    setTimeout(sayTimeOut,2000);
+    const changeMe = setTimeout(jsh1, 2000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+
+    //clearTimeout need reference of the setTimeout you want to clear
+</script>
+</html>
