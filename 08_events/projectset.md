@@ -1,4 +1,4 @@
-##change color
+##change color project 6
 
 ```javascript
 
@@ -32,4 +32,31 @@ document.querySelector('#start').addEventListener('click', startChangingColor)
 document.querySelector('#stop').addEventListener('click', stopChangingColor)
 
 
+```
+
+
+###project 5
+```javascript
+console.log('Project 5');
+const insert = document.querySelector('#insert')
+console.log(insert)
+
+window.addEventListener('keydown', function(e){
+    insert.innerHTML = `
+      <div class="color">
+        <table>
+        <tr>
+          <th>key</th>
+          <th>key code</th>
+          <th>code</th>
+        </tr>
+        <tr>
+          <th>${e.key === " ", "Space"}</th>
+          <th>${e.keyCode}</th>
+          <th>${e.code}</th>
+        </tr>
+        </table>
+      </div>
+    `
+})
 ```
